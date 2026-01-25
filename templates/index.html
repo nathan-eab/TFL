@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transit</title>
+
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div id="searchOverlay">
+  <div id="handle"></div>
+
+  <div class="search-input-wrap">
+    <input id="searchInput" placeholder="Search bus stop">
+  </div>
+
+  <div id="searchResults"></div>
+</div>
+
+
+<div id="drawer">
+  <div id="handle"></div>
+  <div id="drawerContent"></div>
+</div>
+
+<div id="toolbar">
+  <button class="bus" onclick="resetUI()">
+    <i data-lucide="bus"></i>
+  </button>
+
+  <button class="train" onclick="resetUI()">
+    <i data-lucide="train"></i>
+  </button>
+
+  <button class="search" onclick="openSearch()">
+    <i data-lucide="search"></i>
+  </button>
+
+  <button class="locate" onclick="locateUser()">
+    <i data-lucide="locate"></i>
+  </button>
+</div>
+
+
+<script src="/static/script.js"></script>
+<script>lucide.createIcons()</script>
+
+</body>
+</html>
